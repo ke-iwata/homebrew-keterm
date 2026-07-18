@@ -1,18 +1,18 @@
-cask "kterm" do
+cask "keterm" do
   arch arm: "arm64"
 
   version "0.0.1"
-  sha256 "845d3c61043bcf37cbd1ea0164e4c60a107b2828358a32d274967f39327469d3"
+  sha256 "956182259080d7c49ecc79f50f1959c38d2e8b70d8154a2cced106e6780a931f"
 
-  url "https://github.com/ke-iwata/terminal/releases/download/v#{version}/kterm-#{version}-macos-#{arch}.zip"
-  name "kterm"
+  url "https://github.com/ke-iwata/terminal/releases/download/v#{version}/keterm-#{version}-macos-#{arch}.zip"
+  name "keterm"
   desc "Terminal emulator written from scratch in Rust"
   homepage "https://github.com/ke-iwata/terminal"
 
   depends_on macos: :big_sur
   depends_on arch: :arm64
 
-  app "kterm.app"
+  app "keterm.app"
 
   zap trash: "~/.terminal.config.toml"
 
@@ -23,14 +23,14 @@ cask "kterm" do
   # keeps the default (safer) quarantine behavior for everyone else who
   # doesn't run this specific app.
   caveats <<~EOS
-    kterm is not notarized by Apple, so Gatekeeper will refuse to open it
-    on first launch ("kterm.app is damaged and can't be opened" or
+    keterm is not notarized by Apple, so Gatekeeper will refuse to open it
+    on first launch ("keterm.app is damaged and can't be opened" or
     similar). Either:
 
-      Right-click kterm.app in Finder -> Open -> Open (in the dialog)
+      Right-click keterm.app in Finder -> Open -> Open (in the dialog)
 
     or clear the quarantine flag yourself:
 
-      xattr -dr com.apple.quarantine "#{appdir}/kterm.app"
+      xattr -dr com.apple.quarantine "#{appdir}/keterm.app"
   EOS
 end
