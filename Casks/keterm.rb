@@ -1,8 +1,8 @@
 cask "keterm" do
   arch arm: "arm64"
 
-  version "0.0.4"
-  sha256 "838c4c9643e61a0b0c489222675d6fe2137165aef0bf81e4b9d489eac96fe91c"
+  version "0.0.5"
+  sha256 "a00adc8ed8449456582057f90264bc265b62a62752b837bfb56a8f05f5005aa9"
 
   url "https://github.com/ke-iwata/terminal/releases/download/v#{version}/keterm-#{version}-macos-#{arch}.zip"
   name "keterm"
